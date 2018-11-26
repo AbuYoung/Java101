@@ -16,10 +16,14 @@ public class Draw extends JFrame{
 
     private static void Shape(){
         Shape newShape = new Shape();
+
         newDraw.add(newShape);
         newShape.setBounds(0,0,600,600);
-        newShape.DrawShape();
-        newShape.repaint();
+        while (true) {
+           // SwingUtilities.updateComponentTreeUI(newDraw);
+            for (int i = 300; i >= 0; i--)
+                newShape.repaint();
+        }
     }
 
     public static void main(String[] args) {
